@@ -4,6 +4,7 @@ import os
 from gym import utils
 from gym.envs.mujoco import mujoco_env
 from MyEnv import MyEnv
+import gym
 
 tgt1 = '<geom friction="0.9" fromto="0 0 1.05 0 0 0.6" name="thigh_geom" size="0.05" type="capsule"/>'
 tgt2 = '<geom friction="0.9" fromto="0 0 0.6 0 0 0.1" name="leg_geom" size="0.04" type="capsule"/>'
@@ -14,9 +15,9 @@ tgt2_pos = 1771
 tgt3_pos = 2025
 
 # You need to modify this variable by yourself
-site_packages_dir = '/miniconda3/envs/torch/lib/python3.8/'
+site_packages_dir = os.path.dirname(gym.__file__) #'/home/jinkyu/anaconda3/envs/fedrl/lib/python3.8/' #'/miniconda3/envs/torch/lib/python3.8/'
 
-asset_path = site_packages_dir + 'site-packages/gym/envs/mujoco/assets/'
+asset_path = site_packages_dir + '/envs/mujoco/assets/'#'site-packages/gym/envs/mujoco/assets/'
 ori_xml_path = asset_path + 'hopper.xml'
 
 
