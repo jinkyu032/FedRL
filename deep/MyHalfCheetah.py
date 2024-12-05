@@ -4,6 +4,7 @@ import numpy as np
 from gym import utils
 from gym.envs.mujoco import mujoco_env
 from MyEnv import MyEnv
+import gym
 
 tgt1 = '<geom axisangle="0 1 0 -3.8" name="bthigh" pos=".1 0 -.13" size="0.046 .145" type="capsule"/>'
 tgt2 = '<geom axisangle="0 1 0 .52" name="fthigh" pos="-.07 0 -.12" size="0.046 .133" type="capsule"/>'
@@ -13,9 +14,9 @@ tgt1_pos = 3707 + 7
 tgt2_pos = 4594 + 7
 
 # You need to modify this variable by yourself
-site_packages_dir = '/miniconda3/envs/torch/lib/python3.8/'
+site_packages_dir = os.path.dirname(gym.__file__)  #'/miniconda3/envs/torch/lib/python3.8/'
 
-asset_path = site_packages_dir + 'site-packages/gym/envs/mujoco/assets/'
+asset_path = site_packages_dir + '/envs/mujoco/assets/'#'site-packages/gym/envs/mujoco/assets/'
 ori_xml_path = asset_path + 'half_cheetah.xml'
 
 
