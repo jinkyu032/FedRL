@@ -15,7 +15,7 @@ tgt2_pos = 1771
 tgt3_pos = 2025
 
 # You need to modify this variable by yourself
-site_packages_dir = os.path.dirname(gym.__file__) #'/home/jinkyu/anaconda3/envs/fedrl/lib/python3.8/' #'/miniconda3/envs/torch/lib/python3.8/'
+site_packages_dir = os.path.dirname(gym.__file__)  #'/miniconda3/envs/torch/lib/python3.8/'
 
 asset_path = site_packages_dir + '/envs/mujoco/assets/'#'site-packages/gym/envs/mujoco/assets/'
 ori_xml_path = asset_path + 'hopper.xml'
